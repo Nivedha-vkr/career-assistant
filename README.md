@@ -1,5 +1,7 @@
+SOURCE CODE - https://github.com/Nivedha-vkr/career-assistant
+TRY THE APP HERE - http://127.0.0.1:5000
 
-Career AI Assistant
+CAREER ASSISTANT APP
 
 1. Overview
 The **Career AI Assistant** is a web-based application developed using **Python (Flask framework)** that helps users discover suitable career paths based on their personality traits, skills, and interests. This project is designed to guide students and job seekers in identifying the right career options by analyzing their responses to a personality quiz, resume content, and tracked skill data.
