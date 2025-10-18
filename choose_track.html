@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choose Track</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='choose_track.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Choose Your Career Path</h1>
+    <div class="btn-group">
+      <a href="{{ url_for('quiz', track='tech') }}" class="btnn">Tech Track</a>
+      <a href="{{ url_for('quiz', track='nontech') }}" class="btnn">Non-Tech Track</a>
+    </div>
+  </div>
+</body>
+</html>

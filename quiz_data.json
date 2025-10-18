@@ -1,0 +1,518 @@
+{
+  "track": ["Tech", "Non-Tech"],
+
+  "tech_questions": [
+    {
+      "id": 1,
+      "question": "Do you enjoy solving logical problems?",
+      "category": "interests",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I love problem-solving", "value": "problem_solver"},
+        {"text": "Somewhat, depends on the problem", "value": "moderate_solver"},
+        {"text": "No, I prefer creative work", "value": "creative"}
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Do you enjoy working with people or technology?",
+      "category": "workstyle",
+      "weight": 1,
+      "options": [
+        {"text": "I like working with people", "value": "people_oriented"},
+        {"text": "I like working with technology", "value": "tech_oriented"},
+        {"text": "A balance of both", "value": "balanced"}
+      ]
+    },
+    {
+      "id": 3,
+      "question": "How comfortable are you with programming and technology?",
+      "category": "skills",
+      "weight": 1.5,
+      "options": [
+        {"text": "Very comfortable - I enjoy coding", "value": "tech_expert"},
+        {"text": "Somewhat comfortable - I can learn", "value": "tech_intermediate"},
+        {"text": "Not comfortable - I prefer non-technical tasks", "value": "non_tech"}
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Do you enjoy analyzing data and finding patterns?",
+      "category": "interests",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I love working with data", "value": "data_expert"},
+        {"text": "Sometimes, if it's simple", "value": "data_intermediate"},
+        {"text": "No, I don’t like working with data", "value": "no_data"}
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Do you prefer structured tasks or flexible creative tasks?",
+      "category": "personality",
+      "weight": 1,
+      "options": [
+        {"text": "Structured tasks", "value": "structured"},
+        {"text": "Creative and flexible tasks", "value": "creative"},
+        {"text": "A mix of both", "value": "mixed"}
+      ]
+    },
+    {
+      "id": 6,
+      "question": "How would you describe your personality?",
+      "category": "personality",
+      "weight": 1,
+      "options": [
+        {"text": "Extroverted - I enjoy teamwork and communication", "value": "extroverted"},
+        {"text": "Introverted - I prefer working independently", "value": "introverted"},
+        {"text": "Somewhat in-between", "value": "somewhat_introverted"}
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Do you enjoy leading teams or following instructions?",
+      "category": "personality",
+      "weight": 1,
+      "options": [
+        {"text": "I love leading teams", "value": "leader"},
+        {"text": "I prefer structured guidance", "value": "follower"},
+        {"text": "Depends on the project", "value": "flexible_leader"}
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Which environment do you thrive in?",
+      "category": "workstyle",
+      "weight": 1,
+      "options": [
+        {"text": "Fast-paced tech labs", "value": "tech_lab"},
+        {"text": "Creative studios", "value": "creative_studio"},
+        {"text": "Corporate/business teams", "value": "corporate_team"}
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Do you enjoy designing systems, software, or processes?",
+      "category": "skills",
+      "weight": 1,
+      "options": [
+        {"text": "Software & AI systems", "value": "system_designer"},
+        {"text": "Web and cloud applications", "value": "web_cloud"},
+        {"text": "Organizational or business processes", "value": "business_analyst"}
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Which type of projects excite you the most?",
+      "category": "interests",
+      "weight": 1,
+      "options": [
+        {"text": "AI, ML, and Data Science projects", "value": "ai_projects"},
+        {"text": "Cloud, DevOps, and backend systems", "value": "cloud_projects"},
+        {"text": "Creative, design, and media projects", "value": "creative_projects"}
+      ]
+    }
+  ],
+
+  "nontech_questions": [
+    {
+      "id": 11,
+      "question": "Do you enjoy creating content or educating others?",
+      "category": "interests",
+      "weight": 1,
+      "options": [
+        {"text": "Teaching and mentoring", "value": "educator"},
+        {"text": "Creating visuals, videos, or digital content", "value": "content_creator"},
+        {"text": "Helping others with emotional/mental support", "value": "mental_health"},
+        {"text": "Managing and organizing projects", "value": "manager"}
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Do you enjoy analyzing market trends and planning strategies?",
+      "category": "skills",
+      "weight": 1,
+      "options": [
+        {"text": "Yes, I like analyzing data for business", "value": "business_analyst"},
+        {"text": "Somewhat, depends on the task", "value": "moderate_analyst"},
+        {"text": "No, I prefer creative tasks", "value": "creative_tasks"}
+      ]
+    },
+    {
+      "id": 13,
+      "question": "Do you enjoy working with people or independently?",
+      "category": "personality",
+      "weight": 1,
+      "options": [
+        {"text": "I like collaborating", "value": "collaborator"},
+        {"text": "I prefer working alone", "value": "independent"},
+        {"text": "Depends on the project", "value": "flexible_work"}
+      ]
+    },
+    {
+      "id": 14,
+      "question": "Do you enjoy designing user interfaces or visual experiences?",
+      "category": "skills",
+      "weight": 1,
+      "options": [
+        {"text": "Yes, I love UI/UX design", "value": "uiux"},
+        {"text": "Sometimes, if project requires", "value": "partial_uiux"},
+        {"text": "No, I prefer backend or content work", "value": "non_uiux"}
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Which role excites you the most?",
+      "category": "interests",
+      "weight": 1,
+      "options": [
+        {"text": "AI / ML Engineer", "value": "ai_engineer"},
+        {"text": "Data Analyst / Scientist", "value": "data_scientist"},
+        {"text": "Cloud / DevOps Engineer", "value": "cloud_engineer"},
+        {"text": "Digital Marketing / Social Media", "value": "marketing_specialist"}
+      ]
+    },
+    {
+      "id": 16,
+      "question": "Do you enjoy problem-solving with technology or people?",
+      "category": "interests",
+      "weight": 1,
+      "options": [
+        {"text": "Tech-focused problem solving", "value": "tech_solver"},
+        {"text": "People-focused problem solving", "value": "people_solver"},
+        {"text": "A mix of both", "value": "balanced_solver"}
+      ]
+    },
+    {
+      "id": 17,
+      "question": "Do you enjoy experimenting with AI, ML, or automation tools?",
+      "category": "skills",
+      "weight": 1,
+      "options": [
+        {"text": "Yes, very excited", "value": "ai_ml_tools"},
+        {"text": "Somewhat interested", "value": "moderate_ai"},
+        {"text": "Not interested", "value": "non_ai"}
+      ]
+    },
+    {
+      "id": 18,
+      "question": "Do you enjoy mentoring or teaching others online/offline?",
+      "category": "skills",
+      "weight": 1,
+      "options": [
+        {"text": "Yes, I love teaching", "value": "mentor"},
+        {"text": "Sometimes", "value": "occasional_mentor"},
+        {"text": "No, I prefer working individually", "value": "non_mentor"}
+      ]
+    },
+    {
+      "id": 19,
+      "question": "Do you enjoy leading teams or managing projects?",
+      "category": "personality",
+      "weight": 1,
+      "options": [
+        {"text": "Yes, I enjoy leadership", "value": "leader_role"},
+        {"text": "Sometimes, depends on project", "value": "flexible_lead"},
+        {"text": "No, I prefer technical execution", "value": "tech_role"}
+      ]
+    },
+    {
+      "id": 20,
+      "question": "Which type of impact motivates you the most?",
+      "category": "interests",
+      "weight": 1,
+      "options": [
+        {"text": "Improving technology and automation", "value": "tech_impact"},
+        {"text": "Helping others emotionally or mentally", "value": "people_impact"},
+        {"text": "Creating art, media, or content", "value": "creative_impact"},
+        {"text": "Improving business or organizational processes", "value": "business_impact"}
+      ]
+    }
+  ],
+
+  "career_mappings": {
+    "problem_solver": {"careers": ["Software Developer","Data Scientist","Cybersecurity Analyst","AI Engineer"], "weight":1.2},
+    "moderate_solver": {"careers": ["Project Manager","UI/UX Designer","Digital Marketing Specialist"], "weight":0.8},
+    "creative": {"careers": ["UI/UX Designer","Graphic Designer","Animator","Video Editor"], "weight":1.0},
+    "people_oriented": {"careers":["Project Manager","UI/UX Designer","Digital Marketing Specialist"],"weight":1.0},
+    "tech_oriented": {"careers":["Software Developer","Data Scientist","Cloud Engineer","DevOps Engineer","AI Engineer"],"weight":1.3},
+    "balanced": {"careers":["Project Manager","UI/UX Designer","Data Analyst"],"weight":1.0},
+    "tech_expert":{"careers":["Software Developer","Data Scientist","DevOps Engineer","Machine Learning Engineer","AI Engineer"],"weight":1.5},
+    "tech_intermediate":{"careers":["Data Analyst","Cloud Engineer","Cybersecurity Analyst"],"weight":1.0},
+    "non_tech":{"careers":["Digital Marketing Specialist","Project Manager"],"weight":0.6},
+    "data_expert":{"careers":["Data Scientist","Data Analyst","Machine Learning Engineer","AI Engineer"],"weight":1.4},
+    "data_intermediate":{"careers":["Data Analyst"],"weight":1.0},
+    "no_data":{"careers":["UI/UX Designer","Project Manager","Digital Marketing Specialist"],"weight":0.6},
+    "structured":{"careers":["Software Developer","Data Analyst","Cybersecurity Analyst"],"weight":1.2},
+    "mixed":{"careers":["Project Manager","UI/UX Designer","Digital Marketing Specialist"],"weight":1.0},
+    "extroverted":{"careers":["Project Manager","UI/UX Designer","Digital Marketing Specialist"],"weight":1.0},
+    "introverted":{"careers":["Software Developer","Data Scientist","AI Engineer"],"weight":1.0},
+    "somewhat_introverted":{"careers":["Data Analyst","DevOps Engineer","Cloud Engineer"],"weight":0.9},
+    "leader":{"careers":["Project Manager","Team Lead","Operations Manager"],"weight":1.2},
+    "follower":{"careers":["Software Developer","Data Analyst","UI/UX Designer"],"weight":1.0},
+    "flexible_leader":{"careers":["Business Analyst","Scrum Master","Product Manager"],"weight":1.0},
+    "tech_lab":{"careers":["AI Engineer","Machine Learning Engineer","Data Scientist"],"weight":1.3},
+    "creative_studio":{"careers":["UI/UX Designer","Content Creator","Graphic Designer"],"weight":1.1},
+    "corporate_team":{"careers":["Project Manager","Business Analyst","Digital Marketing Specialist"],"weight":1.0},
+    "system_designer":{"careers":["AI Systems Designer","Cloud Architect","Full Stack Developer"],"weight":1.3},
+    "web_cloud":{"careers":["Full Stack Developer","Cloud Engineer","DevOps Engineer"],"weight":1.2},
+    "business_analyst":{"careers":["Business Analyst","Operations Manager","Project Manager"],"weight":1.1},
+    "ai_projects":{"careers":["AI Engineer","Machine Learning Engineer","Data Scientist"],"weight":1.3},
+    "cloud_projects":{"careers":["Cloud Engineer","DevOps Engineer","Site Reliability Engineer"],"weight":1.2},
+    "creative_projects":{"careers":["Content Creator","UI/UX Designer","Graphic Designer"],"weight":1.1},
+    "educator":{"careers":["Educator","Instructional Designer","Online Tutor"],"weight":1.2},
+    "content_creator":{"careers":["Content Creator","Social Media Manager","Digital Media Specialist"],"weight":1.2},
+    "mental_health":{"careers":["Psychologist","Mental Health Professional","Healthcare Specialist"],"weight":1.3},
+    "manager":{"careers":["Project Manager","Operations Manager","Talent Management Specialist"],"weight":1.2},
+    "moderate_analyst":{"careers":["Business Analyst","Data Analyst"],"weight":1.0},
+    "creative_tasks":{"careers":["UI/UX Designer","Content Creator"],"weight":1.0},
+    "collaborator":{"careers":["Project Manager","Team Lead","Business Analyst"],"weight":1.1},
+    "independent":{"careers":["Software Developer","Data Scientist","AI Engineer"],"weight":1.0},
+    "flexible_work":{"careers":["UI/UX Designer","Digital Marketing Specialist","Business Analyst"],"weight":1.0},
+    "uiux":{"careers":["UI/UX Designer","Frontend Developer"],"weight":1.2},
+    "partial_uiux":{"careers":["UI/UX Designer","Graphic Designer"],"weight":1.0},
+    "non_uiux":{"careers":["Backend Developer","Data Analyst"],"weight":1.0},
+    "ai_engineer":{"careers":["AI Engineer","Machine Learning Engineer"],"weight":1.3},
+    "data_scientist":{"careers":["Data Scientist","Data Analyst"],"weight":1.2},
+    "cloud_engineer":{"careers":["Cloud Engineer","DevOps Engineer"],"weight":1.2},
+    "marketing_specialist":{"careers":["Digital Marketing Specialist","Social Media Manager"],"weight":1.1},
+    "tech_solver":{"careers":["Software Developer","AI Engineer","Data Scientist"],"weight":1.3},
+    "people_solver":{"careers":["Project Manager","Psychologist","Educator"],"weight":1.2},
+    "balanced_solver":{"careers":["UI/UX Designer","Business Analyst","Content Creator"],"weight":1.0},
+    "ai_ml_tools":{"careers":["Machine Learning Engineer","AI Engineer","RPA Developer"],"weight":1.3},
+    "moderate_ai":{"careers":["Data Analyst","AI Engineer"],"weight":1.0},
+    "non_ai":{"careers":["Project Manager","Digital Marketing Specialist"],"weight":0.8},
+    "mentor":{"careers":["Educator","Instructional Designer","Corporate Trainer"],"weight":1.2},
+    "occasional_mentor":{"careers":["Project Manager","Team Lead"],"weight":1.0},
+    "non_mentor":{"careers":["Software Developer","Data Scientist"],"weight":1.0},
+    "leader_role":{"careers":["Project Manager","Operations Manager","Team Lead"],"weight":1.2},
+    "flexible_lead":{"careers":["Business Analyst","Product Manager"],"weight":1.0},
+    "tech_role":{"careers":["Software Developer","Cloud Engineer"],"weight":1.0},
+    "tech_impact":{"careers":["AI Engineer","Data Scientist","DevOps Engineer"],"weight":1.3},
+    "people_impact":{"careers":["Psychologist","Educator","Mentor"],"weight":1.2},
+    "creative_impact":{"careers":["Content Creator","UI/UX Designer","Animator"],"weight":1.1},
+    "business_impact":{"careers":["Business Analyst","Project Manager","Operations Manager"],"weight":1.2}
+  },
+
+  "career_skills_resources": {
+  "Software Developer": {
+    "skills": [
+      "Programming", "Data Structures", "Algorithms", "Object-Oriented Programming",
+      "Version Control (Git)", "Debugging & Testing", "Software Architecture",
+      "Design Patterns", "Databases (SQL/NoSQL)", "APIs & Web Services", "Problem-Solving"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
+      "https://www.coursera.org/specializations/java-programming",
+      "https://www.udemy.com/course/python-for-beginners/"
+    ]
+  },
+  "Data Scientist": {
+    "skills": [
+      "Python", "Data Analysis", "Machine Learning", "Statistics",
+      "Data Visualization", "SQL", "Data Cleaning & Preprocessing",
+      "Big Data Tools (Hadoop/Spark)", "Deep Learning Basics", "Communication of Insights"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=ua-CiDNNj30",
+      "https://www.coursera.org/specializations/data-science-python",
+      "https://www.udemy.com/course/data-science-and-machine-learning/"
+    ]
+  },
+  "AI Engineer": {
+    "skills": [
+      "Machine Learning", "Deep Learning", "AI Algorithms", "Python",
+      "TensorFlow/PyTorch", "Mathematics for AI", "Natural Language Processing",
+      "Computer Vision", "Data Preprocessing", "Model Deployment"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=JMUxmLyrhSk",
+      "https://www.coursera.org/specializations/deep-learning",
+      "https://www.udemy.com/course/artificial-intelligence-ml/"
+    ]
+  },
+  "DevOps Engineer": {
+    "skills": [
+      "CI/CD", "Cloud Infrastructure", "Automation", "Containerization (Docker/Kubernetes)",
+      "Scripting", "Monitoring & Logging", "Infrastructure as Code (Terraform/Ansible)",
+      "Version Control (Git)", "Networking Basics", "Security & Compliance"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=0yW7w8F2TVA",
+      "https://www.udemy.com/course/learn-devops-ci-cd-with-jenkins/",
+      "https://www.coursera.org/specializations/devops"
+    ]
+  },
+  "Cloud Engineer": {
+    "skills": [
+      "AWS/Azure", "Networking", "Cloud Architecture", "Security",
+      "Automation/Scripting", "Cost Optimization", "Containers & Kubernetes",
+      "Monitoring & Logging", "Disaster Recovery & Backup", "Cloud Migration"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=5PSNL1qE6VY",
+      "https://www.udemy.com/course/aws-certified-solutions-architect/",
+      "https://www.coursera.org/specializations/cloud-computing"
+    ]
+  },
+  "Cybersecurity Analyst": {
+    "skills": [
+      "Network Security", "Penetration Testing", "Risk Analysis", "Threat Modeling",
+      "Incident Response", "Security Policies & Compliance", "Vulnerability Assessment",
+      "Cryptography", "Monitoring & SIEM Tools", "Ethical Hacking"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=1X6wW_8z2Z0",
+      "https://www.coursera.org/specializations/it-security",
+      "https://www.udemy.com/course/cyber-security/"
+    ]
+  },
+  "UI/UX Designer": {
+    "skills": [
+      "Wireframing", "Prototyping", "User Research", "Interaction Design",
+      "Visual Design", "Design Tools (Figma/Sketch)", "User Testing",
+      "Information Architecture", "Accessibility", "Typography", "Color Theory"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=Ovj4hFxko7c",
+      "https://www.coursera.org/specializations/ui-ux-design",
+      "https://www.udemy.com/course/ui-ux-design/"
+    ]
+  },
+  "Digital Marketing Specialist": {
+    "skills": [
+      "SEO", "Content Marketing", "Social Media Management", "Email Marketing",
+      "Analytics", "PPC Advertising", "Brand Strategy", "Marketing Automation",
+      "Copywriting", "Conversion Rate Optimization", "Video Marketing"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=6s3EOr9gqCE",
+      "https://www.coursera.org/specializations/digital-marketing",
+      "https://www.hubspot.com/resources"
+    ]
+  },
+  "Educator": {
+    "skills": [
+      "Teaching", "Curriculum Design", "Communication", "Classroom Management",
+      "Assessment & Evaluation", "Educational Technology", "Lesson Planning",
+      "Student Engagement", "Mentorship", "Instructional Strategies"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=5dYAmCk7VSc",
+      "https://www.edx.org/learn/teaching",
+      "https://www.coursera.org/browse/education"
+    ]
+  },
+  "Instructional Designer": {
+    "skills": [
+      "E-learning Design", "Storyboarding", "Learning Management Systems",
+      "Instructional Strategies", "Content Authoring", "Assessment Design",
+      "Multimedia Design", "Learning Analytics", "Project Management", "Feedback Design"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=5yOCXwzpuOU",
+      "https://www.udemy.com/course/instructional-design-foundations/",
+      "https://www.coursera.org/specializations/instructional-design"
+    ]
+  },
+  "Operations Manager": {
+    "skills": [
+      "Leadership", "Process Management", "Strategic Planning", "Budgeting",
+      "Project Management", "Supply Chain Management", "Team Management",
+      "Risk Management", "Performance Monitoring", "Problem-Solving"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=q6XK0S3nslY",
+      "https://www.coursera.org/specializations/operations-management",
+      "https://www.edx.org/course/operations-management"
+    ]
+  },
+  "Business Analyst": {
+    "skills": [
+      "Data Analysis", "Requirements Gathering", "Business Process Modeling",
+      "Stakeholder Communication", "Documentation", "Problem-Solving",
+      "UML & Flowcharting", "SQL/Databases", "Project Management", "Critical Thinking"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=4h2cBY4E9Gk",
+      "https://www.coursera.org/specializations/business-analytics",
+      "https://www.udemy.com/course/business-analysis/"
+    ]
+  },
+  "Psychologist": {
+    "skills": [
+      "Counseling", "Mental Health Awareness", "Research Methods",
+      "Cognitive Behavioral Techniques", "Assessment & Diagnosis", "Ethics in Psychology",
+      "Psychotherapy Methods", "Psychological Testing", "Report Writing", "Data Analysis"
+    ],
+    "resources": [
+      "https://in.indeed.com/career-advice/finding-a-job/how-to-become-psychologist",
+      "https://www.coursera.org/specializations/psychology",
+      "https://www.edx.org/learn/psychology"
+    ]
+  },
+  "Content Creator": {
+    "skills": [
+      "Video Editing", "Graphic Design", "Storytelling", "SEO for Content",
+      "Social Media Strategy", "Branding", "Photography", "Scriptwriting",
+      "Content Planning", "Analytics"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=HnsGx0Zr2Po",
+      "https://www.udemy.com/course/content-creation/",
+      "https://www.skillshare.com/browse/content-creation"
+    ]
+  },
+  "Project Manager": {
+    "skills": [
+      "Leadership", "Communication", "Planning", "Risk Management",
+      "Agile & Scrum", "Budgeting", "Stakeholder Management", "Time Management",
+      "Resource Allocation", "Project Documentation"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=bw-NvGvLHtM",
+      "https://www.coursera.org/learn/project-management",
+      "https://www.udemy.com/course/project-management-fundamentals/"
+    ]
+  },
+  "Graphic Designer": {
+    "skills": [
+      "Photoshop", "Illustrator", "Creativity", "Typography",
+      "Color Theory", "UI Design Basics", "Layout Design", "Branding",
+      "Photo Editing", "Illustration"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=3G0XHzQYf6Q",
+      "https://www.udemy.com/course/graphic-design-masterclass/",
+      "https://www.coursera.org/specializations/graphic-design"
+    ]
+  },
+  "Team Lead": {
+    "skills": [
+      "Leadership", "Team Management", "Planning", "Conflict Resolution",
+      "Mentorship", "Communication", "Delegation", "Performance Tracking",
+      "Motivation", "Problem-Solving"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=Y7M45Zc6vZM",
+      "https://www.coursera.org/learn/leadership",
+      "https://www.udemy.com/course/team-leadership/"
+    ]
+  },
+  "Machine Learning Engineer": {
+    "skills": [
+      "Python", "ML Algorithms", "Deep Learning", "Data Preprocessing",
+      "Model Deployment", "Mathematics for ML", "Feature Engineering",
+      "Model Evaluation", "NLP Basics", "Computer Vision Basics"
+    ],
+    "resources": [
+      "https://www.youtube.com/watch?v=GwIo3gDZCVQ",
+      "https://www.coursera.org/specializations/machine-learning",
+      "https://www.udemy.com/course/machine-learning/"
+    ]
+  }
+}
+
+
+  
+}

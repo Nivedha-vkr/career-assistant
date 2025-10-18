@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Career AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body class="register-body">
+    <div class="register-container">
+        <form action="{{ url_for('register') }}" method="POST" id="form">
+            <h1>Register</h1>
+
+            <!-- Flash messages (from Flask) -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-container">
+                        {% for category, message in messages %}
+                            <div class="flash {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" id="cpassword" name="confirm_password" placeholder="Confirm your password" required>
+                <div class="error"></div>
+            </div>
+
+            <button type="submit">Register</button>
+            <p class="login-text">Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Your Top Career Suggestions</h1>
+{% if results %}
+    {% for item in results %}
+<div class="result-card">
+    <h2>Top {{ loop.index }}: {{ item.career }}</h2>
+    
+
+        {% if item.skills %}
+            <p><strong>Required Skills:</strong> {{ item.skills | join(", ") }}</p>
+            <p><strong>Click the link to learn</strong></p>
+            <ul>
+                {% for link in item.resources %}
+                    <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="footer-links">
+                <a href="{{ url_for('track_all_skills', career=item.career) }}" class="btn-track">Track Skills for {{ item.career }}</a>
+
+            </div>
+        {% else %}
+            <p><em>Skill data not available for this career yet.</em></p>
+        {% endif %}
+    </div>
+    <hr>
+    {% endfor %}
+{% else %}
+    <p>No career suggestions found.</p>
+{% endif %}
+
+    <div class="footer-links">
+        <a href="{{ url_for('quiz', track=track) }}" class="btn-track">Retake Quiz</a>
+
+        <a href="{{ url_for('home') }}" class="btn-track">Home</a>
+    </div>
+</div>
+</body>
+</html>

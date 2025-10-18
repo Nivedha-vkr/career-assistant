@@ -1,0 +1,193 @@
+/* --- General Body --- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fafcfd;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+/* --- Upload Form --- */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.upload-form input[type="file"] {
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.upload-form button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background: #ff908d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upload-form button:hover {
+    background: #fb706b;
+    transform: translateY(-2px);
+}
+
+/* --- Feedback --- */
+.feedback {
+    margin-top: 30px;
+}
+
+.feedback h2 {
+    margin-bottom: 15px;
+    color: #1e1e2f;
+}
+
+.feedback ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feedback li {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.feedback li.good {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedback li.bad {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff908d;
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hamburger */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2100;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    transition: left 0.3s ease;
+    z-index: 2000;
+    padding-top: 4rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: block;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    transition: width 0.3s ease;
+    z-index: 1900;
+}
+
+.overlay.active {
+    width: 100%;
+}
+
+/*RESUME CHOOSE FILE BUTTON*/
+/* Hide the real file input */
+.upload-form input[type="file"] {
+    display: none;
+}
+
+/* Custom styled file upload button */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ff908d;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.custom-file-upload:hover {
+    background-color: #fb706b;
+    transform: translateY(-2px);
+}
+.resume-color{
+    color: #ff524c;
+}

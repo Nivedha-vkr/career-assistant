@@ -1,0 +1,1018 @@
+.body{
+    background-color: aliceblue;
+    background: linear-gradient();
+    background-attachment: fixed;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+#form{
+    width: 400px;
+    margin: 20vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 30px;
+}
+h1{
+    text-align: center;
+    color: black;
+
+}
+#form button{
+   
+    width: 88%;
+    padding: 20px;
+    background: #ff908d;
+    color: white;
+    font-size: 18px;
+    margin: 20px;
+    border: 1px solid cornsilk;
+    border-radius: 8px;;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+}
+.input-group input{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ff908d;
+}
+.input-group input:focus{
+    outline: 0;
+}
+.input-group.error{
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.input-group.success input{
+    border-color: green;
+
+}
+.input-group.error input{
+    border-color: red;
+}
+
+/* ==== HOMEPAGE STYLES ==== */
+
+.home-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7faff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5e00;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-btn {
+    background-color: white;
+    color: #ff5e00;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #e6e6e6;
+}
+
+
+/* Home container */
+.home-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 28px;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+/* ===== CARDS ===== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping */
+    justify-content: space-between; /* evenly spread in row */
+    gap: 20px;                /* spacing between cards */
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+/* Each card */
+.card {
+    flex: 1 1 calc(25% - 20px); /* 4 cards per row minus gap */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+    min-width: 220px; /* prevents cards from shrinking too small */
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #ff908d;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive: tablets and mobiles */
+@media (max-width: 992px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
+.home-container {
+    padding-top: 100px; /* space below fixed navbar */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #ff908d;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+.login-text{
+    
+    font-size: 14px;
+    text-align:center;
+}
+
+/* Buttons */
+.card button {
+    
+background-color: #ff908d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+
+
+/*style for quiz and result*/
+
+.card button:hover {
+    background-color: #ff908d;
+}
+
+
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4faff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff908d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ff908d;
+}
+
+.question {
+    margin: 15px 0;
+    text-align: left;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7faff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container, .result-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ff908d;
+}
+
+.question-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9ff;
+    border-radius: 8px;
+}
+
+.question-block h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+.submit-btn, .retry-btn {
+    display: block;
+    background: #ff908d;
+    color: white;
+    padding: 12px 20px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover, .retry-btn:hover {
+    background: #ff908d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* 🌼 GLOBAL THEME */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fef6e4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 🌟 MAIN CONTAINER */
+.container {
+  background: #fff7f0;
+  max-width: 850px;
+  width: 97%;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: fadeSlideUp 0.6s ease both;
+}
+
+/* ✨ TITLES */
+h1, h2, h3, .title {
+  text-align: center;
+  color: #ff908d;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* 🟧 BUTTONS */
+button, .btn, .btnn, .btnnua {
+  background: #ff908d;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .btn:hover, .btnn:hover, .btnnua:hover {
+  background: #f7cbca;
+  transform: scale(1.05);
+}
+
+/* 🟡 LOGIN / REGISTER FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea,
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #ff908d;
+  box-shadow: 0 0 4px #f7cbca;
+}
+
+/* 💬 FLASH MESSAGES */
+.flash {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.flash.success { background: #d4f8d4; color: #2b7a2b; }
+.flash.error { background: #ffd6d6; color: #c0392b; }
+.flash.info { background: #eaf2ff; color: #2b4cc7; }
+
+/* 💭 CHOOSE TRACK */
+.track-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.track-btn {
+  background: #ff908d;
+  color: #fff;
+  font-size: 18px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+}
+
+.track-btn:hover {
+  background: #f7cbca;
+  transform: scale(1.05);
+}
+
+/* 🧠 QUIZ QUESTIONS */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  border-left: 6px solid #f7cbca;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.question-block p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  cursor: pointer;
+}
+
+label:hover {
+  color: #ff908d;
+}
+
+/* ✅ RESULT PAGE */
+.result-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ff908d;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.result-card h2 {
+  color: #ff908d;
+  font-size: 22px;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin: 5px 0;
+}
+
+.skills-list a {
+  text-decoration: none;
+  color: #444;
+  border-bottom: 1px dashed transparent;
+}
+
+.skills-list a:hover {
+  color: #ff908d;
+  border-bottom-color: #f7cbca;
+}
+
+/* 📊 TRACK ALL SKILLS */
+.progress-bar {
+  width: 100%;
+  background: #eee;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 25px;
+  background: #ff908d;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+
+.skills-list input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #ff908d;
+}
+
+/* 📑 RESUME ANALYZER */
+.feedback {
+  background: #fff7f0;
+  padding: 15px;
+  border-left: 5px solid #ff908d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 🏠 HOME PAGE */
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.nav-links a {
+  background: #ff908d;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #ff908d;
+  transform: scale(1.05);
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff908d;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #ff908d;
+}
+
+.btn-logout {
+    background-color: #ff908d;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.btn-logout:hover {
+    background-color: #dc6c68;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #2d2d2d;
+    border-radius: 3px;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        transition: 0.3s;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Add spacing below fixed navbar */
+.home-container {
+    padding-top: 100px; /* height of navbar + some padding */
+}
+
+/* Flexbox for cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* allows cards to wrap to next line */
+    justify-content: center; /* center cards in row */
+    gap: 20px; /* spacing between cards */
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+/* Each card */
+.card {
+    flex: 1 1 250px; /* grow, shrink, basis */
+    max-width: 280px; /* max width of a card */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #f47c78;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* ===== NAVBAR & SIDE MENU ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ff908d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.app-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Right side dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Side menu */
+.side-menu {
+    position: fixed;
+    top: 60px;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.side-menu a {
+    display: block;
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.side-menu a:hover {
+    background-color: #f2f2f2;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+/* Adjust main content for navbar */
+.home-container {
+    padding-top: 100px; /* space below navbar */
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-name {
+        font-size: 16px;
+    }
+
+    .dropbtn {
+        font-size: 14px;
+    }
+
+    .side-menu {
+        width: 180px;
+    }
+}
+
+
+
+
+
+
+.settings-card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    text-align: left;
+}
+
+.settings-card h3 {
+    color: #ff908d;
+    margin-bottom: 10px;
+}
+
+.settings-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Hamburger (always visible, right-top corner) */
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2100;
+}
+
+/* Make sure hamburger is always on the right */
+.navbar {
+  flex-wrap: nowrap;
+}
+.navbar .hamburger {
+  margin-left: auto; /* pushes it to the right */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* hidden initially */
+  width: 260px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 2000;
+  padding-top: 4rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: block;
+}
+
+/* Active sidebar */
+.sidebar.active {
+  left: 0;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  transition: width 0.3s ease;
+  z-index: 1900;
+}
+
+.overlay.active {
+  width: 100%;
+}
+
+/* Main content spacing so it doesn’t hide under navbar */
+.home-container {
+  margin-top: 5rem;
+  padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1.3rem;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+  }
+}
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Track All Skills</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+  <style>
+    .skills-list { list-style: none; padding: 0; }
+    .skills-list li { margin: 8px 0; display: flex; align-items: center; justify-content: space-between; }
+    .add-skill { margin: 15px 0; }
+    .progress-bar { background: #eee; border-radius: 8px; overflow: hidden; margin: 15px 0; }
+    .progress { background: #73a975; color: white; text-align: center; padding: 5px 0; }
+    .remove-skill-btn { background: #ea9993; color: white; border: none; border-radius: 4px; cursor: pointer; padding: 2px 6px; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="track-color">Track Your Skills</h2>
+
+    <!-- Add new skill input -->
+    <div class="add-skill">
+      <input type="text" id="new-skill-input" placeholder="Add your own skill">
+      <button type="button" id="add-skill-btn" class="btnn">Add</button>
+    </div>
+
+    <!-- Skill checklist -->
+    <form method="POST" id="skills-form">
+      <ul class="skills-list" id="skills-list">
+        {% for skill, done in skills.items() %}
+          <li>
+            <label>
+              <input type="checkbox" name="completed" value="{{ skill }}" {% if done %}checked{% endif %}>
+              {{ skill }}
+            </label>
+            <button type="button" class="remove-skill-btn">❌</button>
+          </li>
+        {% endfor %}
+      </ul>
+      <button type="submit" class="btnn">Save</button>
+    </form>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+      <div class="progress" style="width: {{ progress }}%">{{ progress }}%</div>
+    </div>
+
+    <br>
+    <a href="{{ url_for('result') }}" class="btnn">Result</a>
+    <a href="{{ url_for('home') }}" class="btnn">Home</a>
+  </div>
+
+<script>
+const addBtn = document.getElementById("add-skill-btn");
+const input = document.getElementById("new-skill-input");
+const list = document.getElementById("skills-list");
+
+// Add new skill
+addBtn.addEventListener("click", () => {
+  const skill = input.value.trim();
+  if (skill) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <label>
+        <input type="checkbox" name="completed" value="${skill}">
+        ${skill}
+      </label>
+      <button type="button" class="remove-skill-btn">❌</button>
+    `;
+    list.appendChild(li);
+    input.value = "";
+    updateProgress();
+  }
+});
+
+// Remove skill
+list.addEventListener("click", function(e) {
+  if (e.target.classList.contains("remove-skill-btn")) {
+    const li = e.target.closest("li");
+    li.remove();
+    updateProgress();
+  }
+});
+
+// Update progress bar when checkboxes change
+document.getElementById("skills-form").addEventListener("change", updateProgress);
+
+function updateProgress() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"][name="completed"]');
+  const total = checkboxes.length;
+  const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+  const percentage = total ? Math.round((checked / total) * 100) : 0;
+
+  const progressBar = document.querySelector(".progress");
+  progressBar.style.width = percentage + "%";
+  progressBar.textContent = percentage + "%";
+}
+</script>
+</body>
+</html>

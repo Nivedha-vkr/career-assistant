@@ -1,0 +1,209 @@
+{
+  "track": "Non-Tech",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Do you enjoy teaching, mentoring, or helping others learn?",
+      "category": "interest",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, I love teaching", "value": "educator"},
+        {"text": "Sometimes, when I know the topic", "value": "instructor"},
+        {"text": "No, I prefer designing or marketing", "value": "designer"}
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Do you enjoy creating visuals or designs?",
+      "category": "skills",
+      "weight": 1.4,
+      "options": [
+        {"text": "Yes, I love graphic or UI design", "value": "designer"},
+        {"text": "Somewhat, I’m learning design", "value": "design_learner"},
+        {"text": "No, I prefer strategy or writing", "value": "strategist"}
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Do you like analyzing business problems and providing solutions?",
+      "category": "interest",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, I love business analysis", "value": "business_analyst"},
+        {"text": "Somewhat, I’m learning", "value": "business_beginner"},
+        {"text": "No, I prefer creativity", "value": "creative"}
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Do you enjoy managing projects or leading teams?",
+      "category": "skills",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, leadership is my strength", "value": "project_manager"},
+        {"text": "Sometimes, if the team is good", "value": "team_lead"},
+        {"text": "No, I prefer independent work", "value": "independent"}
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Do you like creating marketing campaigns or brand content?",
+      "category": "interest",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, I enjoy marketing & social media", "value": "digital_marketer"},
+        {"text": "Somewhat, I like content strategy", "value": "content_creator"},
+        {"text": "No, I prefer management", "value": "manager"}
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Do you like understanding human behavior or psychology?",
+      "category": "skills",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I find it fascinating", "value": "psychologist"},
+        {"text": "Somewhat, I’m interested", "value": "counselor"},
+        {"text": "No, I prefer logical work", "value": "analyst"}
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Do you enjoy designing online learning materials?",
+      "category": "interest",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I love instructional design", "value": "instructional_designer"},
+        {"text": "Somewhat, I like helping others learn", "value": "educator"},
+        {"text": "No, I prefer marketing or graphics", "value": "creative"}
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Do you like planning events, operations, or processes?",
+      "category": "skills",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, I enjoy organizing things", "value": "operations_manager"},
+        {"text": "Somewhat", "value": "coordinator"},
+        {"text": "No, I prefer creative freedom", "value": "creative"}
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Do you enjoy working on social platforms and managing communities?",
+      "category": "interest",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I love building communities", "value": "social_media_manager"},
+        {"text": "Somewhat", "value": "digital_marketer"},
+        {"text": "No", "value": "content_creator"}
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Do you prefer analytical or creative roles?",
+      "category": "personality",
+      "weight": 1.1,
+      "options": [
+        {"text": "Analytical roles", "value": "business_analyst"},
+        {"text": "Creative roles", "value": "designer"},
+        {"text": "A mix of both", "value": "digital_marketer"}
+      ]
+    }
+  ],
+
+  "career_mappings": {
+    "educator": {"careers": ["Educator"], "weight": 1.3},
+    "instructional_designer": {"careers": ["Instructional Designer"], "weight": 1.3},
+    "designer": {"careers": ["UI/UX Designer", "Graphic Designer"], "weight": 1.2},
+    "business_analyst": {"careers": ["Business Analyst"], "weight": 1.3},
+    "project_manager": {"careers": ["Project Manager"], "weight": 1.2},
+    "digital_marketer": {"careers": ["Digital Marketing Specialist", "Social Media Manager"], "weight": 1.3},
+    "psychologist": {"careers": ["Psychologist"], "weight": 1.3},
+    "operations_manager": {"careers": ["Operations Manager"], "weight": 1.2}
+  },
+
+  "career_skills_resources": {
+    "Educator": {
+      "skills": ["Teaching", "Curriculum Design", "Communication", "Assessment"],
+      "resources": [
+        "https://www.youtube.com/watch?v=5dYAmCk7VSc",
+        "https://www.edx.org/learn/teaching",
+        "https://www.coursera.org/browse/education"
+      ]
+    },
+    "Instructional Designer": {
+      "skills": ["E-learning Design", "Storyboarding", "LMS Management", "Content Writing"],
+      "resources": [
+        "https://www.youtube.com/watch?v=kbU_BvdYtT4",
+        "https://www.udemy.com/course/instructional-design-foundations/",
+        "https://www.coursera.org/specializations/instructional-design"
+      ]
+    },
+    "UI/UX Designer": {
+      "skills": ["Wireframing", "Prototyping", "User Research", "Figma", "Adobe XD"],
+      "resources": [
+        "https://www.youtube.com/watch?v=9B0vqyGzKkk",
+        "https://www.coursera.org/specializations/ui-ux-design",
+        "https://www.udemy.com/course/ui-ux-design/"
+      ]
+    },
+    "Graphic Designer": {
+      "skills": ["Photoshop", "Illustrator", "Creativity", "Brand Identity"],
+      "resources": [
+        "https://www.youtube.com/watch?v=3G0XHzQYf6Q",
+        "https://www.udemy.com/course/graphic-design-masterclass/",
+        "https://www.coursera.org/specializations/graphic-design"
+      ]
+    },
+    "Business Analyst": {
+      "skills": ["Process Modeling", "Data Analysis", "Communication", "Excel", "SQL"],
+      "resources": [
+        "https://www.youtube.com/watch?v=4h2cBY4E9Gk",
+        "https://www.coursera.org/specializations/business-analytics",
+        "https://www.udemy.com/course/business-analysis/"
+      ]
+    },
+    "Digital Marketing Specialist": {
+      "skills": ["SEO", "Social Media", "Google Ads", "Analytics", "Content Strategy"],
+      "resources": [
+        "https://www.youtube.com/watch?v=nJyzK8lXWlI",
+        "https://www.coursera.org/specializations/digital-marketing",
+        "https://www.udemy.com/course/digital-marketing-masterclass/"
+      ]
+    },
+    "Social Media Manager": {
+      "skills": ["Brand Strategy", "Content Creation", "Engagement", "Analytics"],
+      "resources": [
+        "https://www.youtube.com/watch?v=b3H9DMBvPQQ",
+        "https://www.udemy.com/course/social-media-marketing-masterclass/",
+        "https://www.coursera.org/specializations/social-media-marketing"
+      ]
+    },
+    "Psychologist": {
+      "skills": ["Counseling", "Research", "Mental Health Awareness", "Empathy"],
+      "resources": [
+        "https://www.youtube.com/watch?v=s9SYehzJH4U",
+        "https://www.coursera.org/specializations/psychology",
+        "https://www.edx.org/learn/psychology"
+      ]
+    },
+    "Operations Manager": {
+      "skills": ["Leadership", "Strategic Planning", "Project Management", "Finance"],
+      "resources": [
+        "https://www.youtube.com/watch?v=QvQK6F6QSWk",
+        "https://www.coursera.org/specializations/operations-management",
+        "https://www.edx.org/course/operations-management"
+      ]
+    },
+    "Project Manager": {
+      "skills": ["Leadership", "Planning", "Risk Management", "Scheduling"],
+      "resources": [
+        "https://www.youtube.com/watch?v=YWStD6eCwKc",
+        "https://www.coursera.org/learn/project-management",
+        "https://www.udemy.com/course/project-management-fundamentals/"
+      ]
+    }
+  }
+}

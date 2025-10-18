@@ -1,0 +1,28 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Career AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logins.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body class="login-body">
+    <div class="form-container">
+        <h2 class="login-text">Login</h2>
+        <form id="loginForm" action="{{ url_for('login') }}" method="POST">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <p class="register-text">Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+        </form>
+    </div>
+</body>
+</html>

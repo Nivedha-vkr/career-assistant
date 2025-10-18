@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career AI Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Career AI</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="/home">🏠 Home</a></li>
+      <li><a href="/account">⚙️ Account Settings</a></li>
+      <li><a href="/settings">🔧 Settings</a></li>
+      <li><a href="/logout">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="home-container">
+    <h1 class="title">Welcome, {{ username }} 👋</h1>
+    <p>Select a section to get started:</p>
+
+    <div class="card-container">
+      <a href="{{ url_for('choose_track') }}" class="card">
+        <h3>Select Career Path</h3>
+        <p>Discover your strengths & get career suggestions.</p>
+      </a>
+      <a href="{{ url_for('result') }}" class="card">
+        <h3>Career Suggester</h3>
+        <p>Find careers that fit your personality.</p>
+      </a>
+      <a href="{{ url_for('track_all_skills') }}" class="card">
+        <h3>Skill Tracker</h3>
+        <p>Track & improve your tech skills easily.</p>
+      </a>
+      <a href="{{ url_for('resume_analyzer') }}" class="card">
+        <h3>Resume Analyzer</h3>
+        <p>Get AI-powered resume feedback instantly.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    hamburger.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  </script>
+
+</body>
+</html>

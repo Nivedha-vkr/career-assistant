@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analyzer - Career AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resume_analyzer.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Career AI</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+
+    <div class="container">
+        <h1 class="resume-color">Resume Analyzer</h1>
+        <p>Upload your resume (PDF or DOCX) to get personalized feedback based on your tracked skills and suggested careers.</p>
+
+        <!-- Upload Form 
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="resume" accept=".pdf,.docx" required>
+            <button type="submit">Analyze Resume</button>
+        </form>
+    -->
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+    <label class="custom-file-upload">
+        Choose Resume
+        <input type="file" name="resume" accept=".pdf,.docx" required>
+    </label>
+    <button type="submit">Analyze Resume</button>
+</form>
+
+        {% if feedback %}
+        <div class="feedback">
+            <h2>Feedback:</h2>
+            <ul>
+                {% for item in feedback %}
+                    {% if "✅" in item %}
+                        <li class="good">{{ item }}</li>
+                    {% elif "⚠️" in item %}
+                        <li class="bad">{{ item }}</li>
+                    {% else %}
+                        <li>{{ item }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Sidebar (optional if using your sidebar JS) -->
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('account') }}">Account Settings</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+    </script>
+</body>
+</html>

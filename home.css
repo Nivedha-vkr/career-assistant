@@ -1,0 +1,166 @@
+/* Reset and basic layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff908d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  z-index: 2000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  z-index: 2100;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -270px; /* hidden initially */
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  z-index: 2050;
+  padding-top: 70px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: black;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 2000;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Main content */
+.home-container {
+  text-align: center;
+  padding-top: 100px;
+  padding: 120px 20px;
+}
+
+.title {
+  color: black;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+/* Fix for card container layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Make all cards same size */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff908d;
+  text-align: left;
+  padding: 1.5rem;
+  width: 280px; /* fixed width for uniformity */
+  height: 220px; /* fixed height for equal box size */
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* On hover: lift slightly */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 94, 0, 0.2);
+    border-color: #ff908d;
+}
+
+/* Card titles */
+.card h3 {
+  margin-bottom: 0.6rem;
+  color: #ff5e0f;
+  font-size: 1.2rem;
+}
+
+/* Card text */
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    height: auto;
+  }
+}

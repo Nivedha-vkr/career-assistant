@@ -1,0 +1,94 @@
+/*-------CHOOSE TRACK-----*/
+
+/* Reset default margins and set full height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f6f9fc, #e9f1ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Fade-in animation for the entire container */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 40px;
+  color: #333333;
+  font-size: 2rem;
+  position: relative;
+}
+
+/* Subtle underline animation for title */
+h1::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(135deg, #ff908d, #ffc5c4);
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.container:hover h1::after {
+  width: 60%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button animation setup */
+.btnn {
+  text-decoration: none;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  color: #fff0e3;
+  background: linear-gradient(135deg, #ff908d, #f7cbca);
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button glow effect on hover */
+.btnn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.btnn:hover::before {
+  left: 100%;
+}
+
+.btnn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+}

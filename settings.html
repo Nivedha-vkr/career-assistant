@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - Career AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar (same as home.html) -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="menu-icon" id="menu-toggle">&#9776;</div>
+            <h2 class="app-name">Career AI Assistant</h2>
+        </div>
+
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="dropbtn">{{ username }} ▼</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('settings') }}">⚙️ Settings</a>
+                    <a href="{{ url_for('account') }}">👤 Account</a>
+                    <a href="{{ url_for('logout') }}">🚪 Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="side-menu">
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('choose_track') }}">🧭 Dashboard</a>
+        <a href="{{ url_for('track_all_skills') }}">📊 Skill Tracker</a>
+        <a href="{{ url_for('resume_analyzer') }}">📄 Resume Analyzer</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="home-container">
+        <h1 class="title">Settings</h1>
+        <p>Manage your account and preferences here.</p>
+
+        <div class="settings-card">
+            <h3>Account Info</h3>
+            <p><strong>Username:</strong> {{ username }}</p>
+            <p><strong>Email:</strong> user@example.com</p> <!-- Replace with actual email if available -->
+        </div>
+
+        <div class="settings-card">
+            <h3>Preferences</h3>
+            <p>You can update notifications, themes, and other settings here.</p>
+        </div>
+
+        <div class="settings-card">
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </div>
+    </div>
+
+    <!-- JS for side menu toggle -->
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+
+    menuToggle.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

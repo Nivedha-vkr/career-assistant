@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .skill-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+            border-radius: 6px;
+        }
+        .completed {
+            color: green;
+            font-weight: bold;
+        }
+        .not-completed {
+            color: red;
+            font-weight: bold;
+        }
+        .footer-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+        .footer-links a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Skill Progress</h1>
+
+        {% if skills %}
+            {% for skill, completed in skills.items() %}
+                <div class="skill-card">
+                    <span>{{ skill }}</span>
+                    {% if completed %}
+                        <span class="completed">Completed ✅</span>
+                    {% else %}
+                        <span class="not-completed">Not Completed ❌</span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No skills tracked yet.</p>
+        {% endif %}
+
+        <div class="footer-links">
+            <a href="{{ url_for('track_all_skills') }}">Track Skills</a>
+            <a href="{{ url_for('home') }}">Home</a>
+        </div>
+    </div>
+</body>
+</html>

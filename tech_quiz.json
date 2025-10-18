@@ -1,0 +1,210 @@
+{
+  "track": "Tech",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Do you enjoy writing code and building applications?",
+      "category": "interest",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, I love programming", "value": "developer"},
+        {"text": "Somewhat, I’m interested but new", "value": "beginner_tech"},
+        {"text": "No, I prefer non-coding tasks", "value": "non_coding"}
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Do you like solving problems using data and statistics?",
+      "category": "skills",
+      "weight": 1.4,
+      "options": [
+        {"text": "Yes, I love analyzing data", "value": "data_scientist"},
+        {"text": "Somewhat, I’m interested to learn", "value": "data_beginner"},
+        {"text": "No, I prefer creative or design work", "value": "creative"}
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Do you enjoy automating systems or working on cloud infrastructure?",
+      "category": "interest",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, automation and cloud excite me", "value": "devops_engineer"},
+        {"text": "Somewhat, I like system management", "value": "system_admin"},
+        {"text": "No, I prefer frontend or design", "value": "frontend_focused"}
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Do you like training computers to make predictions or decisions?",
+      "category": "interest",
+      "weight": 1.4,
+      "options": [
+        {"text": "Yes, I’m fascinated by AI & ML", "value": "ai_engineer"},
+        {"text": "I’m curious but not confident yet", "value": "ai_beginner"},
+        {"text": "No, I prefer web or mobile development", "value": "developer"}
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Do you enjoy finding security vulnerabilities and protecting systems?",
+      "category": "interest",
+      "weight": 1.4,
+      "options": [
+        {"text": "Yes, cybersecurity sounds thrilling", "value": "cybersecurity"},
+        {"text": "Somewhat, I’m interested to explore", "value": "security_learner"},
+        {"text": "No, I prefer data or AI-related work", "value": "ai_engineer"}
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Would you enjoy building visually appealing websites or apps?",
+      "category": "skills",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I love frontend development", "value": "frontend_developer"},
+        {"text": "Somewhat, I prefer backend logic", "value": "backend_developer"},
+        {"text": "No, I prefer data or security work", "value": "data_scientist"}
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Do you like working with hardware or Internet of Things (IoT)?",
+      "category": "interest",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, I love integrating hardware & software", "value": "iot_engineer"},
+        {"text": "Somewhat interested", "value": "tech_explorer"},
+        {"text": "No, I prefer software-only work", "value": "developer"}
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Are you interested in creating scalable backend systems?",
+      "category": "skills",
+      "weight": 1.3,
+      "options": [
+        {"text": "Yes, backend and APIs interest me", "value": "backend_developer"},
+        {"text": "Somewhat, but I’m still learning", "value": "beginner_tech"},
+        {"text": "No, I prefer UI or design", "value": "frontend_developer"}
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Do you enjoy researching and experimenting with new technologies?",
+      "category": "personality",
+      "weight": 1.2,
+      "options": [
+        {"text": "Yes, I love exploring emerging tech", "value": "research_engineer"},
+        {"text": "Sometimes, when relevant to projects", "value": "curious_mind"},
+        {"text": "No, I prefer stable work environments", "value": "structured"}
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Do you prefer working on team-based software projects?",
+      "category": "personality",
+      "weight": 1.1,
+      "options": [
+        {"text": "Yes, I love teamwork", "value": "team_player"},
+        {"text": "I like both solo and team work", "value": "flexible"},
+        {"text": "I prefer independent tasks", "value": "independent_worker"}
+      ]
+    }
+  ],
+
+  "career_mappings": {
+    "developer": {"careers": ["Software Developer"], "weight": 1.3},
+    "data_scientist": {"careers": ["Data Scientist"], "weight": 1.4},
+    "devops_engineer": {"careers": ["DevOps Engineer"], "weight": 1.3},
+    "ai_engineer": {"careers": ["AI Engineer", "Machine Learning Engineer"], "weight": 1.5},
+    "cybersecurity": {"careers": ["Cybersecurity Analyst"], "weight": 1.3},
+    "frontend_developer": {"careers": ["Frontend Developer", "UI/UX Designer"], "weight": 1.2},
+    "backend_developer": {"careers": ["Backend Developer"], "weight": 1.3},
+    "iot_engineer": {"careers": ["IoT Engineer"], "weight": 1.3},
+    "research_engineer": {"careers": ["Research Engineer"], "weight": 1.2}
+  },
+
+  "career_skills_resources": {
+    "Software Developer": {
+      "skills": ["Programming", "Data Structures", "Algorithms", "Git", "Testing", "Software Design"],
+      "resources": [
+        "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
+        "https://www.coursera.org/specializations/java-programming",
+        "https://www.udemy.com/course/python-for-beginners/"
+      ]
+    },
+    "Frontend Developer": {
+      "skills": ["HTML", "CSS", "JavaScript", "React", "UI Design"],
+      "resources": [
+        "https://www.youtube.com/watch?v=3JluqTojuME",
+        "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
+        "https://www.coursera.org/learn/html-css-javascript-for-web-developers"
+      ]
+    },
+    "Backend Developer": {
+      "skills": ["Node.js", "Databases", "APIs", "Security", "System Design"],
+      "resources": [
+        "https://www.youtube.com/watch?v=ENrzD9HAZK4",
+        "https://www.udemy.com/course/nodejs-the-complete-guide/",
+        "https://www.coursera.org/specializations/python-django"
+      ]
+    },
+    "Data Scientist": {
+      "skills": ["Python", "Pandas", "Machine Learning", "Statistics", "Visualization"],
+      "resources": [
+        "https://www.youtube.com/watch?v=ua-CiDNNj30",
+        "https://www.coursera.org/specializations/data-science-python",
+        "https://www.udemy.com/course/data-science-and-machine-learning/"
+      ]
+    },
+    "AI Engineer": {
+      "skills": ["Deep Learning", "NLP", "Neural Networks", "TensorFlow"],
+      "resources": [
+        "https://www.youtube.com/watch?v=JMUxmLyrhSk",
+        "https://www.coursera.org/specializations/deep-learning",
+        "https://www.udemy.com/course/artificial-intelligence-ml/"
+      ]
+    },
+    "Machine Learning Engineer": {
+      "skills": ["Supervised Learning", "Scikit-learn", "Feature Engineering", "Python"],
+      "resources": [
+        "https://www.youtube.com/watch?v=GwIo3gDZCVQ",
+        "https://www.coursera.org/specializations/machine-learning",
+        "https://www.udemy.com/course/machine-learning/"
+      ]
+    },
+    "DevOps Engineer": {
+      "skills": ["CI/CD", "Docker", "Kubernetes", "AWS", "Automation"],
+      "resources": [
+        "https://www.youtube.com/watch?v=9pZ2xmsSDdo",
+        "https://www.coursera.org/specializations/devops",
+        "https://www.udemy.com/course/learn-devops-ci-cd-with-jenkins/"
+      ]
+    },
+    "Cybersecurity Analyst": {
+      "skills": ["Penetration Testing", "Networking", "Firewalls", "Risk Analysis"],
+      "resources": [
+        "https://www.youtube.com/watch?v=inWWhr5tnEA",
+        "https://www.coursera.org/specializations/it-security",
+        "https://www.udemy.com/course/cyber-security/"
+      ]
+    },
+    "IoT Engineer": {
+      "skills": ["Embedded Systems", "Networking", "Sensors", "Python", "Arduino"],
+      "resources": [
+        "https://www.youtube.com/watch?v=4Y7zG48uHRo",
+        "https://www.coursera.org/specializations/iot",
+        "https://www.udemy.com/course/iot-internet-of-things-course/"
+      ]
+    },
+    "Research Engineer": {
+      "skills": ["AI Research", "Math", "Paper Writing", "ML Tools", "Statistics"],
+      "resources": [
+        "https://www.youtube.com/watch?v=Udd5kU5Vj-8",
+        "https://www.coursera.org/learn/ai-for-everyone",
+        "https://www.udemy.com/course/advanced-machine-learning/"
+      ]
+    }
+  }
+}

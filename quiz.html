@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Career Path Quiz</h1>
+        <form method="POST">
+        {% for q_index, question in quiz_data['questions_enumerated'] %}
+    <div class="question-block">
+        <h3>{{ question['question'] }}</h3>
+        {% for option in question['options'] %}
+            <label>
+                <input type="radio" 
+                       name="question_{{ q_index }}" 
+                       value="{{ option['value'] }}" 
+                       required
+                       {% if request.form.get('question_' ~ q_index|string) == option['value'] %}checked{% endif %}>
+                {{ option['text'] }}
+            </label><br>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+        <button type="submit" class="btnn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

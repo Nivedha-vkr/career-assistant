@@ -1,0 +1,94 @@
+
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skill Tracker - {{ skill }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+  <div class="container animate">
+    <h1>📊 Skill Progress for {{ skill }}</h1>
+
+    <!-- Custom Task Form -
+    <div class="card">
+      <h3>Add Custom Task</h3>
+      <form method="POST" action="{{ url_for('skill_tracker', skill=skill) }}">
+        <input type="text" name="custom_task" placeholder="Enter a new task" required>
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+    </div>
+
+    <!-- Progress Checklist --
+    <form method="POST" action="{{ url_for('skill_tracker', skill=skill) }}">
+      {% for task in checklist %}
+        <label class="checkbox-label">
+          <input type="checkbox"
+                 name="completed"
+                 value="{{ loop.index0 }}"
+                 {% if saved_progress.get(loop.index0) == 1 %} checked {% endif %}>
+          {{ task }}
+        </label><br>
+      {% endfor %}
+      <br>
+      
+      <!-- Skill Navigation --
+      <div class="skill-nav">
+        <a href="{{ url_for('skill_tracker', skill='Python') }}">Python</a>
+        <a href="{{ url_for('skill_tracker', skill='SQL') }}">SQL</a>
+        <a href="{{ url_for('skill_tracker', skill='Java') }}">Java</a>
+        <!-- Add more skills as needed --
+      </div>
+
+      <button type="submit" class="btn">Save Progress</button>
+    </form>
+
+    <!-- Progress Bar --
+    {% if checklist %}
+      <div class="progress-block">
+        <progress value="{{ completed_count }}" max="{{ checklist|length }}"></progress>
+        <p>{{ completed_count }} / {{ checklist|length }} tasks completed ({{ ((completed_count / checklist|length) * 100)|round }}%)</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ career }} - Skill Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>📌 {{ career }} - Skill Tracker</h2>
+
+    <form method="POST">
+      <ul class="skills-list">
+        {% for skill, done in skills.items() %}
+          <li>
+            <label>
+              <input type="checkbox" name="{{ skill }}" {% if done %}checked{% endif %}>
+              {{ skill }}
+            </label>
+          </li>
+        {% endfor %}
+      </ul>
+      <button type="submit" class="btnn">Update Progress</button>
+    </form>
+
+    <!-- Progress bar -
+    <div class="progress-bar">
+      <div class="progress" style="width: {{ progress }}%">{{ progress }}%</div>
+    </div>
+
+    <br>
+    <a href="{{ url_for('result') }}" class="btnn">⬅ Back to Results</a>
+  </div>
+</body>
+</html>
+
+-->
