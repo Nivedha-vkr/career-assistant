@@ -461,7 +461,7 @@ def resume_analyzer():
 
             text_lower = text.lower()
 
-            # 1️⃣ Required Sections
+            #  Required Sections
             required_sections = ["education", "experience", "skills", "projects"]
             for section in required_sections:
                 if section not in text_lower:
@@ -469,7 +469,7 @@ def resume_analyzer():
                 else:
                     feedback.append(f"✅ Section found: {section.title()}")
 
-            # 2️⃣ Skills Analysis
+            # Skills Analysis
             matched_skills = [s for s in user_skills if s in text_lower]
             missing_skills = [s for s in user_skills if s not in text_lower]
 
@@ -478,7 +478,7 @@ def resume_analyzer():
             if missing_skills:
                 feedback.append(f"⚠️ Skills missing in resume: {', '.join(missing_skills)}")
 
-            # 3️⃣ Career Match Analysis (optional)
+            #  Career Match Analysis (optional)
             if top_career_name:
                 feedback.append(f"🎯 Top suggested career: {top_career_name}")
                 # Optionally, we can suggest adding specific skills/resources from JSON
@@ -491,24 +491,24 @@ def resume_analyzer():
                     career_skills_lower = [s.lower() for s in career_skills]
                     missing_for_career = [s for s in career_skills_lower if s not in text_lower]
                     if missing_for_career:
-                        feedback.append(f"⚠️ Skills important for '{top_career_name}' missing: {', '.join(missing_for_career)}")
+                        feedback.append(f"Skills important for '{top_career_name}' missing: {', '.join(missing_for_career)}")
                     else:
-                        feedback.append(f"✅ Your resume aligns well with '{top_career_name}' skills!")
+                        feedback.append(f"Your resume aligns well with '{top_career_name}' skills!")
 
-            # 4️⃣ Resume Length
+            # Resume Length
             word_count = len(text.split())
             if word_count < 200:
-                feedback.append("⚠️ Resume is too short. Add more details.")
+                feedback.append("Resume is too short. Add more details.")
             elif word_count > 800:
-                feedback.append("⚠️ Resume may be too long. Keep it concise (1-2 pages).")
+                feedback.append("Resume may be too long. Keep it concise (1-2 pages).")
             else:
-                feedback.append("✅ Resume length looks good.")
+                feedback.append("Resume length looks good.")
 
-            # 5️⃣ Contact Info
+            # Contact Info
             if not re.search(r"\b\d{10}\b", text) and "@" not in text:
-                feedback.append("⚠️ Contact details (email/phone) missing.")
+                feedback.append("Contact details (email/phone) missing.")
             else:
-                feedback.append("✅ Contact info detected.")
+                feedback.append(" Contact info detected.")
 
     return render_template("resume_analyzer.html", feedback=feedback)
 
